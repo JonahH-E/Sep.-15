@@ -1,0 +1,17 @@
+# Author: Jonah, Date:9/15/21, Purpose:Calculate T test value on sample datasets
+
+# Generate sample random numbers and store them in variables x and y
+
+x = rnorm(10)
+y = rnorm(10)
+
+# Plotting x and y variables
+
+pts = seq(-4.5,4.5,length=100)
+plot(pts,dt(pts,df=9),col='red',type='l')
+lines(density(x), col='green')
+lines(density(y), col='blue')
+
+# Apply T test
+
+ttest=t.test(x,y)
